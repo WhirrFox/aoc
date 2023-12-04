@@ -27,6 +27,7 @@ func main() {
 	scanner := bufio.NewScanner(file)
 	sum, card := 0, 0
 	for scanner.Scan() {
+		fmt.Println("Card", card+1)
 		for i := 0; i < *cardCounts[card]; i++ {
 			processCard(&cardCounts, card, scanner.Text())
 			sum++
@@ -38,7 +39,6 @@ func main() {
 }
 
 func processCard(cardCounts *[maxCards]*int, card int, s string) {
-	fmt.Println("Card", card+1)
 	sum := 0
 	s = strings.Split(s, ":")[1]
 	split := strings.Split(s, "|")
