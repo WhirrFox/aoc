@@ -1,3 +1,3 @@
-module github.com/WhirrFox/aoc2023
+module github.com/WhirrFox/aoc
 
-go 1.21.4
+go 1.23.3
